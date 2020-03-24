@@ -30,7 +30,6 @@
     <brickhouse.version>0.6.0</brickhouse.version>
     <super-csv.version>2.0.1</super-csv.version>
     <akka-actor.version>2.0.5</akka-actor.version>
-    <gbif-common-mybatis.version>0.18</gbif-common-mybatis.version>
     <commons-beanutils-core>1.8.3</commons-beanutils-core>
     <!-- The timestamp is used to set the start date for the Oozie coordinator job -->
     <!-- We want the coordinator to run at 05:00 UTC -->
@@ -272,7 +271,6 @@
     <dependency>
       <groupId>org.gbif</groupId>
       <artifactId>gbif-common-mybatis</artifactId>
-      <version>${gbif-common-mybatis.version}</version>
     </dependency>
     <dependency>
       <groupId>org.gbif.registry</groupId>

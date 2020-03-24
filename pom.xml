@@ -144,11 +144,12 @@
     <gbif-common-search.version>0.35</gbif-common-search.version>
     <gbif-common-service.version>0.17</gbif-common-service.version>
     <gbif-common-ws.version>0.48</gbif-common-ws.version>
+    <gbif-common-mybatis.version>0.18</gbif-common-mybatis.version>
     <geocode.version>0.13</geocode.version>
     <gbif-httputils.version>0.10</gbif-httputils.version>
     <gbif-parsers.version>0.44</gbif-parsers.version>
     <gbif-postal-service.version>0.35</gbif-postal-service.version>
-    <gbif-registry.version>2.151</gbif-registry.version>
+    <gbif-registry.version>2.151-SNAPSHOT</gbif-registry.version>
     <gbif-registry-ws-client.version>2.151</gbif-registry-ws-client.version>
     <gbif-wrangler.version>0.4</gbif-wrangler.version>
     <checklistbank-ws-client.version>2.72</checklistbank-ws-client.version>
@@ -281,6 +282,11 @@
         <groupId>org.gbif</groupId>
         <artifactId>gbif-common-ws</artifactId>
         <version>${gbif-common-ws.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.gbif</groupId>
+        <artifactId>gbif-common-mybatis</artifactId>
+        <version>${gbif-common-mybatis.version}</version>
       </dependency>
       <dependency>
         <groupId>org.gbif.common</groupId>

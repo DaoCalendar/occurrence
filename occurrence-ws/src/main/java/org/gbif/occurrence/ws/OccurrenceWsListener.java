@@ -1,7 +1,8 @@
 package org.gbif.occurrence.ws;
 
 import org.gbif.checklistbank.ws.client.guice.ChecklistBankWsClientModule;
-import org.gbif.identity.inject.IdentityAccessModule;
+import org.gbif.occurrence.download.service.IdentityAccessServiceModule;
+import org.gbif.occurrence.download.service.IdentityMyBatisModule;
 import org.gbif.occurrence.download.service.OccurrenceDownloadServiceModule;
 import org.gbif.occurrence.persistence.guice.OccurrencePersistenceModule;
 import org.gbif.occurrence.query.TitleLookupModule;
@@ -58,7 +59,8 @@ public class OccurrenceWsListener extends GbifServletListener {
     modules.add(new ChecklistBankWsClientModule(properties));
     // others
     modules.add(new WsAuthModule(properties));
-    modules.add(new IdentityAccessModule(properties));
+    modules.add(new IdentityMyBatisModule(PropertiesUtil.filterProperties(properties,"registry.db")));
+    modules.add(new IdentityAccessServiceModule(properties));
     modules.add(new ValidationModule());
     modules.add(new OccurrencePersistenceModule(properties));
     modules.add(new OccurrenceSearchModule(properties));
